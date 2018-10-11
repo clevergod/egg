@@ -9,5 +9,24 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  config.mysql = {
+    client: {
+      // host
+      host: 'localhost',
+      // port
+      port: '3306',
+      // username
+      user: 'root',
+      // password
+      password: '12345678',
+      // database
+      database: 'demo',
+    },
+    // load into app, default is open
+    app: true,
+    // load into agent, default is close
+    agent: false,
+  };
+
   return config;
 };
